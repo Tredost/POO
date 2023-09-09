@@ -1,4 +1,4 @@
-public class LivroFisico extends Livros{
+public class LivroFisico extends Livro{
         boolean emprestado;
 
         public LivroFisico(String titulo, String autor) {
