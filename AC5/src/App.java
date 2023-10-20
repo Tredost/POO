@@ -4,8 +4,8 @@ public class App {
 
         AlunoDAO alunos= new AlunoDAO();
 
-        alunos.adicionarAluno("Ian", "Ciência de Dados", "202302937314");
-        alunos.adicionarAluno("Matheus", "Fullstack", "202302417949");
+        alunos.adicionarAluno("Ian Esteves", "Ciência de Dados", "202302937314");
+        alunos.adicionarAluno("Matheus Liporace", "Fullstack", "202302417949");
 
         System.out.println(alunos);
 
