@@ -44,9 +44,9 @@ import java.util.List;
     
         public String toString() {
             String listaAlunos = "";
-            
+
             for (Aluno aluno : alunos) {
-                listaAlunos += aluno + "\n";
+                listaAlunos += aluno + "\n\n";
             }
             return listaAlunos;
         }
