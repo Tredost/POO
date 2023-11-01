@@ -10,7 +10,7 @@ public class App {
         Scanner leitor = new Scanner(System.in);
 
         while (executando) {
-            System.out.println("O que deseja fazer?\n  1 - Listar todos os alunos\n  2 - Buscar aluno por matrícula\n  3 - Adicionar aluno\n  4 - Remover aluno\n  5 - Editar aluno\n  6 - Salvar e sair\n");
+            System.out.println("O que deseja fazer?\n  1 - Listar todos os alunos\n  2 - Buscar aluno por matrícula\n  3 - Adicionar aluno\n  4 - Remover aluno\n  5 - Editar curso\n  6 - Salvar e sair\n");
 
             int opcao = leitor.nextInt();
             leitor.nextLine();
@@ -21,7 +21,7 @@ public class App {
                     break;
 
                 case 2:
-                    System.out.println(alunos.buscarMatricula(leitor));
+                    System.out.println(alunos.buscarMatricula(leitor) + "\n");
                     break;
 
                 case 3:
@@ -33,7 +33,7 @@ public class App {
                     break;
 
                 case 5:
-                    //alunos.editarAluno(scanner);
+                    alunos.atualizarCurso(leitor);
                     break;
 
                 case 6:

@@ -22,7 +22,7 @@ import java.util.Scanner;
             try (BufferedReader reader = new BufferedReader(new FileReader(arquivoAlunos))) {
                 String linha;
                 while ((linha = reader.readLine()) != null) {
-                    String[] dados = linha.split("|");
+                    String[] dados = linha.split("\\|");
                     if (dados.length == 3) {
                         String nome = dados[0];
                         String curso = dados[1];
@@ -36,7 +36,7 @@ import java.util.Scanner;
         }
 
         public void salvarDados() {
-            try (BufferedWriter writer = new BufferedWriter(new FileWriter(arquivoAlunos, true))) {
+            try (BufferedWriter writer = new BufferedWriter(new FileWriter(arquivoAlunos, false))) {
                 for (Aluno aluno : alunos) {
                     writer.write(aluno.getNome() + "|" + aluno.getCurso() + "|" + aluno.getMatricula());
                     writer.newLine();
@@ -72,14 +72,17 @@ import java.util.Scanner;
         public void atualizarCurso(Scanner leitor) {
             System.out.print("Digite a matrícula do aluno: ");
             String matricula = leitor.nextLine();
-            System.out.print("Digite o novo curso do aluno: ");
-            String novoCurso = leitor.nextLine();
             for (Aluno aluno : alunos) {
                 if (aluno.getMatricula().equals(matricula)) {
+                    System.out.println("Aluno encontrado: " + aluno.getNome());
+                    System.out.println("Curso atual: " + aluno.getCurso());
+                    System.out.print("Digite o novo curso do aluno: ");
+                    String novoCurso = leitor.nextLine();
                     aluno.setCurso(novoCurso);
-                    break;
+                    return;
                 }
             }
+            System.err.println("Matrícula não encontrada!\n");
         }
 
         public Aluno buscarMatricula(Scanner leitor) {
