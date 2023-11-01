@@ -54,7 +54,7 @@ import java.util.Scanner;
             System.out.print("Digite o curso do aluno: ");
             String curso = leitor.nextLine();
             this.alunos.add(new Aluno(nome, curso, matricula));
-            System.out.println("Aluno adicionado com sucesso.");
+            System.out.println("Aluno adicionado com sucesso!");
         }
 
         public void removerAluno(Scanner leitor) {
@@ -63,7 +63,7 @@ import java.util.Scanner;
             for (Aluno aluno : alunos) {
                 if (aluno.getMatricula().equals(matricula)) {
                     alunos.remove(aluno);
-                    System.out.println("Aluno removido com sucesso.");
+                    System.out.println("Aluno removido com sucesso!");
                     break;
                 }
             }
