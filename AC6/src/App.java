@@ -39,6 +39,7 @@ public class App {
                 case 6:
                     alunos.salvarDados();
                     executando = false;
+                    System.out.println("Salvando e encerrando programa!");
                     break;
 
                 default:

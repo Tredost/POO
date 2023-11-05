@@ -67,6 +67,7 @@ import java.util.Scanner;
                     break;
                 }
             }
+            System.err.println("Matricula não encontrada!");
         }
 
         public void atualizarCurso(Scanner leitor) {
@@ -93,6 +94,7 @@ import java.util.Scanner;
                     return aluno;
                 }
             }
+            System.err.println("Matricula não encontrada!");
             return null;
         }
 

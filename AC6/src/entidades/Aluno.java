@@ -15,7 +15,7 @@ public class Aluno {
 
     public String toString() {
         return "Nome do aluno: " + this.nome + "\n" +
-        "Curso: " + this.curso + "\n" + "Matrícula: " + this.matricula ;
+        "Curso: " + this.curso + "\n" + "Matrícula: " + this.matricula;
     }
 
     // GETTERS
